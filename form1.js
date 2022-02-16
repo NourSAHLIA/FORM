@@ -58,14 +58,14 @@ function verif()
 {  var error=false;
 if(alpha(f_name.value)==false||f_name.value=="")
 {
-    document.getElementById("error1").innerHTML="message d'erreure nom";
+    document.getElementById("error1").innerHTML="message d'erreur prénom";
     error=true;
 }
 
 
 if(alpha(l_name.value)==false||l_name.value=="")
 {
-    document.getElementById("error2").innerHTML="message d'erreure l_nom";
+    document.getElementById("error2").innerHTML="message d'erreur nom";
     error=true;
 }
 
@@ -73,30 +73,30 @@ if(alpha(l_name.value)==false||l_name.value=="")
 var e=e_mail.value;
 if((e=="")||(e.indexOf("@")==-1)||(e.indexOf(".")==-1)||(e.indexOf(".")<e.indexOf("@")))
 {
-document.getElementById("error3").innerHTML="message d'erreure mail";
+document.getElementById("error3").innerHTML="message d'erreur mail";
 error=true;
 }
 if(num(phone.value)==false||phone.value.length!=8)
 {
- document.getElementById("error4").innerHTML="message d'erreure phone";
+ document.getElementById("error4").innerHTML="message d'erreur phone";
 error=true; 
 }
 
 if(PW(password.value)==false)
 {
- document.getElementById("error5").innerHTML="message d'erreure mot de pass";
+ document.getElementById("error5").innerHTML="message d'erreur mot de passe";
 error=true; 
 }
 
 if(password.value!=password2.value)
 {
-    document.getElementById("error6").innerHTML=" bite noch einmale das passwort ist falsh";
+    document.getElementById("error6").innerHTML=" message d'erreur :vérifiez mot de passe";
 error=true; 
 }
 var d= new Date(date_of_birth.value);
 if(2022-d.getFullYear()<18)
 {
-    document.getElementById("error7").innerHTML="du bist ein kind";
+    document.getElementById("error7").innerHTML="mineur";
     error=true;
 }
 return !error;
