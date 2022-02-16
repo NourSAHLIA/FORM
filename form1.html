@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="form1.css" >
+     <script src="form1.js" defer></script>
+    <title>form</title>
+</head>
+<body>
+    <div class="container">
+        <form id="form" onsubmit="return verif()" action="/"><!--ici il html le5ir-->
+            <h1>registration</h1>
+            <div class="input-control">
+                <label for="frist_name">first name</label>
+                <input id="frist_name" name="username" type="text">
+                <div class="error" id="error1"></div> 
+            </div>
+
+            <div class="input-control">
+                <label for="last_name">last name</label>
+                <input id="last_name" name="username1"  type="text">
+                <div class="error" id="error2"></div> 
+            </div>
+
+            <div class="input-control">
+                <label for="email">Email</label>
+                <input id="email" name="mail" type="text">
+                <div class="error" id="error3"></div> 
+            </div>
+
+            <div class="input-control">
+                <label for="phone number">phone number</label>
+                <input id="phone_number" name="phone" type="text">
+                <div class="error" id="error4"></div> 
+            </div>
+
+            <div class="input-control">
+                <label for="password">password</label>
+                <input id="password" name="password" type="password">
+                <div class="error" id="error5"></div> 
+            </div>
+
+            <div class="input-control">
+                <label for="password">password again</label>
+                <input id="password2" name="password2" type="password">
+                <div class="error" id="error6"></div> 
+            </div>
+
+            <div class="input-control">
+                <label for="gender">male</label>
+                <input id="mgender" name="gender" type="radio">
+                <div class="error"></div> 
+            </div>
+
+            <div class="input-control">
+                <label for="gender">female</label>
+                <input id="fegender" name="gender" type="radio">
+                <div class="error"></div> 
+            </div>
+
+            <div class="input-control" >
+                <label for="date of birth">date of birth</label>
+                <input id="date_of_birth" name="date of birth" type="date" required>
+                <div class="error" id="error7"></div> 
+            </div>
+            <button type="submit">sign up</button>
+        </form>
+    </div>
+</body>
+
+
+
+
