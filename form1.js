@@ -1,7 +1,9 @@
+icon = '<svg version="1.1" class="Layer_1" width="20px" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"viewBox="0 0 50 50" style="enable-background:new 0 0 50 50;" xml:space="preserve"><style type="text/css">.st0{fill:none;stroke:#DD0A0E;stroke-width:2.3;stroke-miterlimit:10;}</style><g><line class="st0" x1="9.5" y1="40.5" x2="40.5" y2="9.5"/></g><line class="st0" x1="9.5" y1="9.5" x2="40.5" y2="40.5"/></svg>'
 const f_name = document.getElementById("frist_name");
 const l_name = document.getElementById("last_name");
 const e_mail = document.getElementById("email");
 const  phone = document.getElementById("phone_number");
+const gender = document.getElementsByName("gender");
 const password = document.getElementById("password");
 const password2 = document.getElementById("password2");
 const date_of_birth = document.getElementById("date_of_birth");
@@ -99,6 +101,51 @@ if(2022-d.getFullYear()<18)
     document.getElementById("error7").innerHTML="mineur";
     error=true;
 }
-return !error;
+if (error==false)
+{
+    if(gender[0].checked)
+    {
+        x="male";
+    }
+    else
+    {
+        x="female";
+    }
+    const data = [f_name.value,l_name.value,e,phone.value,x,date_of_birth.value];
+    add_element(data);
+}
+return false;
+}
+const tab = document.getElementById("tab");
+function delete_element()
+{
+    this.parentNode.parentNode.remove();
+}
+function add_element(data)
+{
+    tr = document.createElement("tr");
+    data.forEach((item) => {
+        th = document.createElement("th");
+        th.innerHTML = item;
+        tr.appendChild(th);
+        
+    });
+    a = document.createElement("a");
+    a.innerHTML=icon;
+    a.addEventListener("click",delete_element);
+    a_edit = document.createElement("a");
+    a_edit.innerHTML ="edit";
+    a_edit.classList.add("edit");
+    a_edit.addEventListener("click",edit_element);
+    th = document.createElement("th");
+    th.appendChild(a);
+    th.appendChild(a_edit);
+    tr.appendChild(th);
+    tab.appendChild(tr);
+}
+function edit_element()
+{
+    var parent = this.parentNode.parentNode;
+    var childs = parent.childNodes;
 
 }
