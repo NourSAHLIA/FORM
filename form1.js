@@ -103,24 +103,15 @@ if(2022-d.getFullYear()<18)
 }
 if (error==false)
 {
-    if(gender[0].checked)
-    {
-        x="male";
-    }
-    else
-    {
-        x="female";
-    }
+    const x = gender[0].checked ? "male" : "female";
     const data = [f_name.value,l_name.value,e,phone.value,x,date_of_birth.value];
     add_element(data);
+    document.getElementById("form").reset();
 }
 return false;
+
 }
 const tab = document.getElementById("tab");
-function delete_element()
-{
-    this.parentNode.parentNode.remove();
-}
 function add_element(data)
 {
     tr = document.createElement("tr");
@@ -132,7 +123,9 @@ function add_element(data)
     });
     a = document.createElement("a");
     a.innerHTML=icon;
-    a.addEventListener("click",delete_element);
+    a.addEventListener("click",()=>{
+        this.parentNode.parentNode.remove();
+    });
     a_edit = document.createElement("a");
     a_edit.innerHTML ="edit";
     a_edit.classList.add("edit");
@@ -146,6 +139,20 @@ function add_element(data)
 function edit_element()
 {
     var parent = this.parentNode.parentNode;
-    var childs = parent.childNodes;
+    var childs = parent.children;
+    f_name.value = childs[0].innerHTML;
+    l_name.value = childs[1].innerHTML;
+    e_mail.value = childs[2].innerHTML;
+    phone.value = childs[3].innerHTML;
+    if(childs[4].innerHTML=="male")
+    {
+        gender[0].click();
+    }
+    else
+    {
+        gender[1].click();
+    }
+    date_of_birth.value = childs[5].innerHTML;
+    parent.remove();
 
 }

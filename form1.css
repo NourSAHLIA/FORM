@@ -1,5 +1,5 @@
 body {
-    background: linear-gradient(to right, #1c89b8, #203a43, #2c5364);
+    background: linear-gradient(to top right, #ac1313,#b81919ed,#212043, #2c4464);
     font-family: 'Poppins', sans-serif;
 }
 .container
@@ -9,7 +9,7 @@ body {
 
 #form {
     width: 300px;
-    margin: 5vh 10vw 0 20vw;
+    margin: 5vh 10vw 0 10vw;
     padding: 20px;
     background-color: rgba(245, 245, 245, 0.329);
 
@@ -28,7 +28,7 @@ body {
     margin-top: 10px;
     width: 100%;
     color: white;
-    background-color: rgb(41, 57, 194);
+    background-color: rgba(173, 30, 30, 0.74);
     border: none;
     border-radius: 4px;
 }
@@ -86,7 +86,7 @@ body {
 }
 .table,.table th, .table tr
 {
-    border: 1px solid red;
+    border: 5px solid rgba(131, 119, 187, 0.5);
 }
 .edit
 {
