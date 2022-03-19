@@ -123,9 +123,7 @@ function add_element(data)
     });
     a = document.createElement("a");
     a.innerHTML=icon;
-    a.addEventListener("click",()=>{
-        this.parentNode.parentNode.remove();
-    });
+    a.addEventListener("click", deleteRow(a+1) );
     a_edit = document.createElement("a");
     a_edit.innerHTML ="edit";
     a_edit.classList.add("edit");
